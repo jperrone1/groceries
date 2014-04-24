@@ -1,5 +1,10 @@
-<h1> Index Page! </h1>
+<h1> Shopping List </h1>
+
+<%= link_to "Add An Item", new_food_path %></br>
 
 <% @foods.each do |food| %>
-	<li><%= food.item %></li>
+	<li><%= link_to food.item, food_path(food.id) %>
+		<%= link_to "edit", edit_food_path(food[:id]) %>
+		<%= link_to "delete", food, method: :delete, data: {confirm: "Are you sure?"} %>
+	</li>
 <% end %>

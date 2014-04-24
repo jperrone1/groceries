@@ -2,7 +2,24 @@ Rails.application.routes.draw do
 
   root 'foods#index'
 
+  resources :foods
+
 end
+
+# Jeffs-MacBook-Pro-2:groc_list Jeff$ rake routes
+#    Prefix Verb   URI Pattern               Controller#Action
+#      root GET    /                         foods#index
+#     foods GET    /foods(.:format)          foods#index
+#           POST   /foods(.:format)          foods#create
+#  new_food GET    /foods/new(.:format)      foods#new
+# edit_food GET    /foods/:id/edit(.:format) foods#edit
+#      food GET    /foods/:id(.:format)      foods#show
+#           PATCH  /foods/:id(.:format)      foods#update
+#           PUT    /foods/:id(.:format)      foods#update
+#           DELETE /foods/:id(.:format)      foods#destroy
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,12 @@
+
+<h1>Create A New Item</h1>
+
+<%= form_for @food do |f| %>
+
+	<%= label_tag(:item, "Item") %>
+	<%= f.text_field :item %></br>
+
+	<%= label_tag(:details, "Details") %>
+	<%= f.text_area :details %></br>
+	<%= f.submit "Create" %> 
+<% end %>
